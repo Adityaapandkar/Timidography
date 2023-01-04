@@ -36,3 +36,27 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const nav = document.querySelector('.nav-links');
+const openNavbtn = document.querySelector('#nav-toggle-open');
+const closeNavBtn = document.querySelector('#nav-toggle-close');
+
+const openNav = () => {
+  nav.getElementsByClassName.display = 'flex';
+  openNavbtn.getElementsByClassName.display = 'none';
+  closeNavBtn.getElementsByClassName.display = 'inline-block';
+}
+
+openNavbtn.addEventListener('click', openNav);
+
+const closeNav = () => {
+  nav.getElementsByClassName.display = 'none';
+  openNavbtn.getElementsByClassName.display = 'inline-block';
+  closeNavBtn.getElementsByClassName.display = 'none';
+}
+
+closeNavbtn.addEventListener('click', closeNav);
+
+nav.querySelectorAll('li a').forEach(navLink => {
+  navLink.addEventListener('click', closeNav);
+})
