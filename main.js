@@ -37,6 +37,32 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+const videos = document.querySelectorAll("video");
+
+videos.forEach((video) =>
+  video.addEventListener("click", () => {
+    // Pause all other videos except for the one that was clicked
+    videos.forEach((otherVideo) => {
+      if (otherVideo !== video && !otherVideo.paused) {
+        otherVideo.pause();
+        otherVideo.currentTime = 0;
+        otherVideo.classList.remove("active");
+      }
+    });
+
+    // Toggle the "active" class on the clicked video
+    video.classList.toggle("active");
+
+    // Play or pause the clicked video
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  })
+);
+
 const nav = document.querySelector(".nav-links");
 const openNavBtn = document.querySelector("#nav-toggle-open");
 const closeNavBtn = document.querySelector("#nav-toggle-close");

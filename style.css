@@ -386,6 +386,90 @@ header {
   margin: 0 4rem 1.5rem 0;
 }
 
+#videography {
+  margin-top: 10rem;
+}
+
+.videography-title {
+  margin-bottom: 5rem;
+}
+
+.videography-container {
+  position: relative;
+}
+
+.videography-empty {
+  width: 26rem;
+  position: absolute;
+  right: 14rem;
+  top: 0;
+}
+
+.videography-head {
+  display: grid;
+  grid-template-columns: auto 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.videography-head > p {
+  width: 45rem;
+}
+
+.videography-btn {
+  color: var(--color-primary-variant);
+}
+
+.videography-btn:hover {
+  transform: translateY(-1rem);
+}
+
+.videography-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 6rem;
+}
+
+.video {
+  height: 32rem;
+  width: 18rem;
+  overflow: hidden;
+}
+
+.video video {
+  cursor: pointer;
+}
+
+.videography-gallery article {
+  border: 0.5rem solid var(--color-bg-4);
+  transition: var(--transition);
+}
+
+.videography-gallery article video {
+  height: 100%;
+  filter: saturate(0);
+  transition: var(--transition);
+}
+
+.videography-gallery article:hover video {
+  filter: saturate(1);
+  transition: 0.5s linear;
+  transform: scale(1);
+}
+
+.videography-gallery article:hover {
+  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.videography-gallery .video .active {
+  position: absolute;
+  height: auto;
+  width: 20.6%;
+  z-index: 1;
+}
+
 #gallery {
   margin-top: 12rem;
 }
