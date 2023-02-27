@@ -1187,6 +1187,13 @@ footer {
     animation-delay: 600ms;
   }
 
+  .videography-gallery .video .active {
+    position: absolute;
+    height: auto;
+    width: 15%;
+    z-index: 1;
+  }
+
   @keyframes navAnimation {
     to {
       transform: rotateX(0);
@@ -1312,6 +1319,27 @@ footer {
     margin-bottom: 1rem;
   }
 
+  .videography-head > p {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .videography-gallery {
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+
+  .videography-gallery article {
+    border: none;
+  }
+
+  .videography-gallery .video .active {
+    position: absolute;
+    height: auto;
+    width: 81%;
+    z-index: 1;
+  }
+
   #gallery {
     margin-top: 8rem;
   }
@@ -1409,6 +1437,22 @@ footer {
 
   .about-right p {
     width: 100%;
+  }
+
+  #videography {
+    margin-top: 6rem;
+  }
+
+  .videography-head {
+    grid-template-columns: 1fr;
+  }
+
+  .videography-head > p {
+    margin-top: 1rem;
+  }
+
+  .videography-gallery {
+    display: flex;
   }
 
   .swiper-slide {
