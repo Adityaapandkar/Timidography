@@ -1078,7 +1078,6 @@ header {
 }
 
 .exhibitions-gallery article img {
-  height: 100%;
   filter: saturate(0);
   transition: var(--transition);
 }
